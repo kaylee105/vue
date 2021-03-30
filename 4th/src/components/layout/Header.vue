@@ -1,38 +1,39 @@
 <template>
-    <header>
-        <nav>
-            <v-link href="/">Home</v-link>
-            <v-link href="/About">About</v-link>
-            <v-link href="/Contact">Contact</v-link>
+    <header id="header">
+        <nav id="nav">
+            <ul>
+                <li v-for="(item, index) of listItem" :key="index">
+                    <router-link :to="item.link">{{ item.name }}</router-link>
+                </li>
+            </ul>
         </nav>
     </header>
 </template>
 
 <script>
-    import VLink from '@/components/VLink'
-
     export default {
         name: "Header",
-        components: {
-            VLink
+        data() {
+            return {
+                listItem: [
+                    {
+                        name: 'Home',
+                        link: '/',
+                    },
+                    {
+                        name: 'About',
+                        link: '/about',
+                    },
+                    {
+                        name: 'Contact',
+                        link: '/contact',
+                    },
+                    {
+                        name: 'Guide',
+                        link: '/guide',
+                    },
+                ],
+            }
         },
     }
 </script>
-<style lang="scss" scoped>
-    header {
-        width: 100%;
-        height: 50px;
-        background: #000;
-        nav {
-            width:100%;height:100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            a {
-                color:#fff;
-                text-decoration: none;
-                margin:0 30px;
-            }
-        }
-    }
-</style>

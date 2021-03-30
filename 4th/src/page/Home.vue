@@ -8,12 +8,12 @@
 </template>
 
 <script>
-    import Header from "@/components/layout/Header"
+    import Header from "@/components/layout/Header";
 
     export default {
         name: 'Home',
         components: {
-            Header
+            Header,
         },
         data() {
             return {
@@ -24,9 +24,13 @@
     };
 </script>
 <style lang="scss">
-    * {padding: 0;margin: 0;}
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
     .content {
         text-align: center;
-        padding:100px;
+        padding: 100px;
     }
 </style>

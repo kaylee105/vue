@@ -1,21 +1,11 @@
 import Vue from 'vue'
-import router from "./router"
+import App from './App.vue'
+import router from './router'
+import "@/assets/css/common.css"
 
-const app = new Vue({
-  data: {
-    currentRoute: window.location.pathname
-  },
-  computed: {
-    ViewComponent() {
-      return router[this.currentRoute]
-    }
-  },
-  render(h) {
-    return h(this.ViewComponent)
-  }
+Vue.config.productionTip = false
+
+new Vue({
+  router,
+  render: h => h(App)
 }).$mount('#app')
-
-
-window.addEventListener('popstate', () => {
-  app.currentRoute = window.location.pathname
-})
