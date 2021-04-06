@@ -1,0 +1,317 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, Microsoft Yahei, SimSun, Heiti SC, Droid sans, sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.4em;
+  color: #000;
+  letter-spacing: -0.5px;
+  user-select: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* 테이블 스타일 초기화 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  table-layout: fixed;
+}
+
+th, td {
+  font-weight: 500;
+}
+
+td {
+  word-wrap: break-word;
+  word-break: keep-all;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+legend, caption {
+  visibility: hidden;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+address, caption, em, var {
+  font-style: normal;
+  font-weight: inherit;
+}
+
+/* 링크 */
+a {
+  color: #000;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+[role=button] {
+  outline: none;
+}
+
+/* 이미지, 폼관련 요소 */
+img {
+  border: 0;
+  vertical-align: top;
+}
+
+label {
+  cursor: pointer;
+}
+
+select,
+input,
+textarea {
+  width: 100%;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  box-shadow: none;
+  border-radius: 0;
+  outline: none;
+  color: #000;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: Verdana, Microsoft Yahei, SimSun, Heiti SC, Droid sans, sans-serif;
+}
+
+input[type=password] {
+  font-family: sans-serif;
+}
+
+input[type=text],
+input[type=submit],
+input[type=password],
+input[type=search],
+input[type=number],
+input[type=reset],
+input[type=email],
+input[type=tel],
+input[type=search],
+input[type=file],
+input[type=email],
+input[type=tel] {
+  height: 45px;
+  padding: 0 14px;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+textarea:focus {
+  border: 1px solid #000;
+  outline: none;
+}
+
+input[type=password]:focus {
+  color: #000;
+}
+
+input[readonly] {
+  background: #efefef;
+  color: #999;
+}
+input[readonly]:focus {
+  border: 1px solid #ddd;
+}
+
+input:disabled {
+  opacity: 1;
+  background: #fff;
+}
+
+::-webkit-input-placeholder {
+  color: #999;
+}
+
+::-moz-placeholder {
+  color: #999;
+}
+
+::placeholder {
+  color: #999;
+}
+
+select {
+  height: 45px;
+  padding: 0 15px;
+}
+
+textarea {
+  padding: 15px;
+  overflow: auto;
+  resize: none;
+  line-height: 1.5;
+}
+
+button {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+}
+
+.hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #eee;
+}
+
+#header #nav {
+  width: 100%;
+  height: 50px;
+  background: #000;
+}
+#header #nav ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#header #nav ul li {
+  margin: 0 30px;
+}
+#header #nav ul li a {
+  color: #fff;
+}
+
+[class^=ico-] {
+  display: inline-block;
+}
+
+.ico-list {
+  width: 15px;
+  height: 15px;
+  background: url("~@/assets/images/icon/ico-list.jpg") no-repeat;
+  background-size: cover;
+}
+
+.ico-gallery {
+  width: 15px;
+  height: 15px;
+  background: url("~@/assets/images/icon/ico-gallery.jpg") no-repeat;
+  background-size: cover;
+}
+
+.ico-webzine {
+  width: 15px;
+  height: 15px;
+  background: url("~@/assets/images/icon/ico-webzine.jpg") no-repeat;
+  background-size: cover;
+}
+
+table th, table td {
+  padding: 10px 0;
+  vertical-align: middle;
+  text-align: center;
+}
+table thead th {
+  border-top: 2px solid #000;
+  border-bottom: 1px solid #000;
+  font-weight: 700;
+}
+table tbody th, table tbody td {
+  border-bottom: 1px solid #000;
+}
+
+.form-group {
+  width: 600px;
+  margin: 0 auto;
+}
+.form-group .form-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-group .form-item .title,
+.form-group .form-item label {
+  width: 100px;
+  text-align: left;
+}
+.form-group .form-item + .form-item {
+  margin-top: 10px;
+}
+.form-group .chk-wrap {
+  width: 100%;
+  display: inline-flex;
+}
+
+.chk-wrap input {
+  width: auto;
+}
+.chk-wrap label {
+  margin: 0 30px 0 10px;
+}
+
+/*# sourceMappingURL=common.css.map */
